@@ -111,9 +111,9 @@ function App() {
     <div className="container">
       <div className="calculator-grid">
         <div className="shape"></div>
-        <div className="output">
-          <div className="previous-operand">{formattingNumber(prevDigit)} {operation}</div>
-          <div className="current-operand">{formattingNumber(currentDigit)}</div>
+        <div className="display">
+          <div className="previous-digit">{formattingNumber(prevDigit)} {operation}</div>
+          <div className="current-digit">{formattingNumber(currentDigit)}</div>
         </div>
         <button className="span-two" onClick={() => dispatch({ type: ACTIONS.CLEAR })}>AC</button>
         <button onClick={() => dispatch({ type: ACTIONS.DELETE_DIGIT })}>DEL</button>
