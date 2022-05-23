@@ -90,17 +90,25 @@ const reducer = (state, { type, payload}) => {
 }
 
 const evaluate = ({ currentDigit, prevDigit, operation }) => {
+  const currNum = currentDigit;
+  const prevNum = prevDigit;
+  let total = '';
+
   if(operation === '÷') {
-      return +prevDigit / +currentDigit;
+      total = +prevNum / +currNum;
+      return total + '';
   }
   if(operation === '*') {
-      return +prevDigit * +currentDigit;
+      total = +prevNum * +currNum;
+      return total + '';
   }
   if(operation === '+') {
-      return +prevDigit + +currentDigit;
+      total = +prevNum + +currNum;
+      return total + '';
   }
   if(operation === '-') {
-      return +prevDigit - +currentDigit;
+      total = +prevNum - +currNum;
+      return total + '';
   }
 }
 
